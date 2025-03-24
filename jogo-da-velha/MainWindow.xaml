@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:jogo_da_velha"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        ResizeMode="NoResize"
+        Title="Jogo da velha" Height="400" Width="400">
+    <Grid Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Canvas Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <Line X1="0" Y1="0" X2="400" Y2="0" Stroke="#BFBFBF" StrokeThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="-64"/>
+            <Line X1="0" Y1="0" X2="400" Y2="0" Stroke="#BFBFBF" StrokeThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="64"/>
+        </Canvas>
+        <Canvas Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Center">
+            <Line X1="0" Y1="0" X2="0" Y2="400" Stroke="#BFBFBF" StrokeThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-67"/>
+            <Line X1="0" Y1="0" X2="0" Y2="400" Stroke="#BFBFBF" StrokeThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="66"/>
+        </Canvas>
+
+        <TextBlock x:Name="P00" Grid.Row="0" Grid.Column="0" Text="?" FontSize="36" Foreground="#BFBFBF" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="P01" Grid.Row="0" Grid.Column="1" Text="?" FontSize="36" Foreground="#BFBFBF" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="P02" Grid.Row="0" Grid.Column="2" Text="?" FontSize="36" Foreground="#BFBFBF" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+
+        <TextBlock x:Name="P10" Grid.Row="1" Grid.Column="0" Text="?" FontSize="36" Foreground="#BFBFBF" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="P11" Grid.Row="1" Grid.Column="1" Text="?" FontSize="36" Foreground="#BFBFBF" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="P12" Grid.Row="1" Grid.Column="2" Text="?" FontSize="36" Foreground="#BFBFBF" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+
+        <TextBlock x:Name="P20" Grid.Row="2" Grid.Column="0" Text="?" FontSize="36" Foreground="#BFBFBF" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="P21" Grid.Row="2" Grid.Column="1" Text="?" FontSize="36" Foreground="#BFBFBF" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="P22" Grid.Row="2" Grid.Column="2" Text="?" FontSize="36" Foreground="#BFBFBF" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
         
     </Grid>
 </Window>
