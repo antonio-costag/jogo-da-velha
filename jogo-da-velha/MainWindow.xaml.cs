@@ -24,5 +24,11 @@ namespace jogo_da_velha
         {
             InitializeComponent();
         }
+
+        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+            textBlock.Text = "X";
+        }
     }
 }
